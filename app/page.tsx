@@ -179,7 +179,7 @@ export default function Home() {
           <div className="badge">Çok Yakında</div>
 
           <h1 className="title">guney.com</h1>
-          <p className="subtitle">Güney&apos;e Giderken tek ihtiyacınız.</p>
+          <p className="subtitle">güneye giderken tek ihtiyacınız.</p>
 
           <div className="divider"></div>
 
@@ -219,8 +219,6 @@ export default function Home() {
               </div>
             )}
           </div>
-
-          <p className="privacy-note">Spam göndermiyoruz. Sadece önemli güncellemeler.</p>
         </div>
       </div>
     </>

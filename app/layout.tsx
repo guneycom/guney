@@ -16,7 +16,7 @@ const cormorantGaramond = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "güneye giderken — yakında",
+  title: "güneye giderken",
   description: "güneye giderken tek ihtiyacınız.",
 };
 

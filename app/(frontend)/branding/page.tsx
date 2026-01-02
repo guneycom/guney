@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { BackgroundElements } from "@/app/components/background";
+import { BackgroundElements } from "@/app/(frontend)/components/background";
 
 export const metadata: Metadata = {
   title: "Brand Identity | guney.com",

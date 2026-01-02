@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Outfit, Cormorant_Garamond } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import Script from "next/script";
-import "./globals.css";
+import "../globals.css";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -22,11 +22,11 @@ export const metadata: Metadata = {
   description: "güneye giderken tek ihtiyacınız.",
 };
 
-export default function RootLayout({
+export default function FrontendLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="tr">
       <body

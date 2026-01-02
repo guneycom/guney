@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, FormEvent } from "react";
-import { subscribeEmail } from "@/app/actions/subscribe";
-import { BackgroundElements } from "@/app/components/background";
+import Link from "next/link";
+import { subscribeEmail } from "@/app/(frontend)/actions/subscribe";
+import { BackgroundElements } from "@/app/(frontend)/components/background";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -35,6 +36,23 @@ export default function Home() {
 
       {/* Background Elements */}
       <BackgroundElements />
+
+      {/* Navigation */}
+      <Link
+        href="/notes"
+        className="fixed top-8 right-8 z-50 inline-flex items-center gap-2 text-terracotta no-underline font-sans text-sm font-medium tracking-tight transition-all duration-300 hover:text-terracotta-light hover:translate-x-1 max-sm:top-6 max-sm:right-6 max-sm:text-xs"
+      >
+        Notes
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path
+            d="M6 4L10 8L6 12"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </Link>
 
       {/* Main Content */}
       <main className="relative z-10 min-h-screen flex flex-col justify-center items-center px-8 py-12 pb-60 max-sm:px-6 max-sm:pb-72">

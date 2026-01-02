@@ -1,6 +1,6 @@
 "use server"
 
-import { supabase } from "@/app/lib/supabase"
+import { supabase } from "@/app/(frontend)/lib/supabase"
 
 type SubscribeResult = {
   success: boolean

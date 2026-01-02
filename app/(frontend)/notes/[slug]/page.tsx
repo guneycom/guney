@@ -154,15 +154,17 @@ function renderRichText(content: unknown): React.ReactNode {
     }
 
     if (typedNode.type === 'heading') {
-      const Tag = (typedNode.tag || 'h2') as keyof JSX.IntrinsicElements
-      const headingClasses = typedNode.tag === 'h2'
+      const tag = (typedNode.tag || 'h2') as 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+      const headingClasses = tag === 'h2'
         ? 'font-serif text-xl text-terracotta mt-10 mb-4 tracking-tight'
         : 'font-serif text-lg text-charcoal mt-8 mb-3'
-      return (
-        <Tag key={index} className={headingClasses}>
-          {renderChildren(typedNode.children)}
-        </Tag>
-      )
+
+      if (tag === 'h1') return <h1 key={index} className={headingClasses}>{renderChildren(typedNode.children)}</h1>
+      if (tag === 'h2') return <h2 key={index} className={headingClasses}>{renderChildren(typedNode.children)}</h2>
+      if (tag === 'h3') return <h3 key={index} className={headingClasses}>{renderChildren(typedNode.children)}</h3>
+      if (tag === 'h4') return <h4 key={index} className={headingClasses}>{renderChildren(typedNode.children)}</h4>
+      if (tag === 'h5') return <h5 key={index} className={headingClasses}>{renderChildren(typedNode.children)}</h5>
+      return <h6 key={index} className={headingClasses}>{renderChildren(typedNode.children)}</h6>
     }
 
     if (typedNode.type === 'list') {
